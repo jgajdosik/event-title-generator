@@ -16,11 +16,12 @@ service_id = st.text_input("Service ID")
 customer_name = st.text_input("Customer Name")
 address = st.text_input("Physical Address")
 activation_date = st.date_input("Activation Date", value=date.today())
-attempt = st.text_input("Attempt")
+attempt_input = st.text_input("Attempt (e.g., 1, 2, Final)")
 device_type = st.selectbox("Device Type", ["Single", "HA"])
 
 # Generate title
 if st.button("Generate Event Title"):
+    attempt = f"Attempt: {attempt_input}"
     title = f"{event_type} | {service_id} | {customer_name} | {address} | {activation_date.strftime('%m/%d/%Y')} | {attempt} | {device_type}"
     st.success("🎉 Event title generated!")
     st.code(title)
