@@ -16,7 +16,7 @@ service_id = st.text_input("Service ID")
 customer_name = st.text_input("Customer Name")
 address = st.text_input("Physical Address")
 activation_date = st.date_input("Activation Date", value=date.today())
-attempt_input = st.text_input("Attempt (e.g., 1, 2, Final)")
+attempt_input = st.text_input("Attempt (e.g., 1, 2, 3)")
 device_type = st.selectbox("Device Type", ["Single", "HA"])
 
 # Generate title
