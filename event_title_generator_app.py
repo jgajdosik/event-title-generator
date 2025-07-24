@@ -3,7 +3,7 @@ import streamlit as st
 from datetime import date
 
 st.set_page_config(page_title="Event Title Generator", layout="centered")
-st.title("📋 Event Title Generator")
+st.title("📋 SASE Activation Event Title Generator")
 
 # Input fields
 event_type = st.selectbox("Event Type", [
@@ -16,7 +16,7 @@ service_id = st.text_input("Service ID")
 customer_name = st.text_input("Customer Name")
 address = st.text_input("Physical Address")
 activation_date = st.date_input("Activation Date", value=date.today())
-attempt = st.selectbox("Attempt", ["1st", "2nd", "3rd", "Final"])
+attempt = st.text_input("Attempt")
 device_type = st.selectbox("Device Type", ["Single", "HA"])
 
 # Generate title
